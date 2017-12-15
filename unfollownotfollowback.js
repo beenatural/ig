@@ -10,8 +10,8 @@ const delay = require('delay');
 const _ = require('lodash');
 
 const User = {
-    username: '', // Your Username Instagram
-    password: '', // Your Password Instagram
+    username: 'linggasabdha', // Your Username Instagram
+    password: 'linggaboy', // Your Password Instagram
 }
 
 const doLogin = async function(User){
@@ -103,7 +103,7 @@ const Excute = async function(User){
 				await Unfollow(data.session,id);				
 			}))
 			await console.log('[-] Delay For 30s');
-			await delay(30000);	
+			await delay(480000);	
 		}
 	} catch(err){
 		console.log(err);
