@@ -11,7 +11,7 @@ const chalk = require('chalk');
 
 var User = {
     username: 'linggasabdha',
-    password: 'linggasa'
+    password: 'linggasaa'
 }
 
 const onlyUnique = async function(value, index, self) { 
