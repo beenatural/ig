@@ -64,11 +64,12 @@ const Target = async function(username){
 	}
 	try{
 		const account = await rp(option);
-		if (account.user.is_private) {
+
+		if (account.graphql.user.is_private) {
 			return Promise.reject('Target is private Account');
 		} else {
-			const id = account.user.id;
-			const followers = account.user.followed_by.count;
+			const id = account.graphql.user.id;
+			const followers = account.graphql.user.edge_followed_by.count;
 			return Promise.resolve({id,followers});			
 		}
 	} catch (err){
@@ -92,6 +93,7 @@ const CommentAndLike = async function(session, accountId, text){
 		}
 		return chalk`{bold.green SUKSES [FOLLOW]}`
 	} catch (err) {
+		// console.log(err);
 		return chalk`{bold.red GAGAL}`;
 	}
 
