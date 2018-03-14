@@ -132,6 +132,7 @@ const Excute = async function(User, TargetUsername, Text, Sleep){
 			TargetResult = _.chunk(TargetResult, 5);
 			for (let i = 0; i < TargetResult.length; i++) {
 				await Promise.all(TargetResult[i].map(async(akun) => {
+					console.log(akun);
 					if (!getFollowers.includes(akun.id) && akun.params.isPrivate === false) {
 						var ranText = Text[Math.floor(Math.random() * Text.length)];
 						const ngeDo = await CommentAndLike(doLogin.session, akun.id, ranText)
