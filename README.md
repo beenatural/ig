@@ -2,8 +2,8 @@
 
 ## install
 ```
-git clone https://github.com/katonsa/igeh.git
-cd igeh
+git clone https://github.com/beenatural/ig.git
+cd ig
 npm install or yarn install
 ```
 
